@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'rspec'
 require 'active_model'
+require 'action_dispatch'
 require 'rspec/rails/extensions'
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))

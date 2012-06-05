@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
 
   s.require_paths = %w(lib)
   s.add_dependency("activemodel", ">= 0")
+  s.add_dependency("actionpack", ">= 0")
   s.add_dependency "mail"
   s.add_development_dependency("rake")
   s.add_development_dependency("rspec", ">= 0")

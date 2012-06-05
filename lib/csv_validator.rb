@@ -14,7 +14,7 @@ class CsvValidator < ActiveModel::EachValidator
     options = @@default_options.merge(self.options)
     
     begin
-      csv = CSV.read(value)
+      csv = CSV.read(value.path)
     rescue CSV::MalformedCSVError
       record.errors.add(attribute, options[:message] || "is not a valid CSV file")
       return

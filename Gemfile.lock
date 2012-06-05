@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     csv_validator (0.0.1)
+      actionpack
       activemodel
       mail
 

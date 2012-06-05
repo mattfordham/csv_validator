@@ -15,10 +15,14 @@ bundle install
 Then add the following to your model:
 
 ```ruby
+attr_accessor :my_csv_file
+
 validates :my_csv_file, :csv => true
 ```
 
 This will check to see if it is a properly formed CSV file. 
+
+In this case, csv_validator expects :my_csv_file to be an instance of ActionDispatch::Http::UploadedFile, which is created by default for Rails uploads. 
 
 ## Other validation options
 

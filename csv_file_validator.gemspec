@@ -4,11 +4,11 @@ $:.push File.expand_path("../lib", __FILE__)
 Gem::Specification.new do |s|
   s.name        = "csv_validator"
   s.version     = "0.0.1"
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of CsvValidator."
-  s.description = "TODO: Description of CsvValidator."
+  s.authors     = ["Matt Fordham"]
+  s.email       = ["matt@revolvercreative.com"]
+  s.homepage    = "http://github.com/mattfordham/CSV-Validator"
+  s.summary     = "A CVS validator for Rails 3."
+  s.description = "A CVS validator for Rails 3. See homepage for details: http://github.com/mattfordham/CSV-Validator."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 

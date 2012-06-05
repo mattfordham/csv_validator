@@ -3,12 +3,12 @@ $:.push File.expand_path("../lib", __FILE__)
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "csv_validator"
-  s.version     = "0.0.1"
+  s.version     = "0.0.3"
   s.authors     = ["Matt Fordham"]
   s.email       = ["matt@revolvercreative.com"]
   s.homepage    = "http://github.com/mattfordham/csv_validator"
-  s.summary     = "A CVS validator for Rails 3."
-  s.description = "A CVS validator for Rails 3. See homepage for details: http://github.com/mattfordham/csv_validator."
+  s.summary     = "A CSV validator for Rails 3."
+  s.description = "A CSV validator for Rails 3. See homepage for details: http://github.com/mattfordham/csv_validator."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 

@@ -1,4 +1,7 @@
+require 'active_model'
+require 'active_model/validations'
 require 'csv'
+require 'mail'
 
 class CsvValidator < ActiveModel::EachValidator
   @@default_options = {}
@@ -57,10 +60,19 @@ class CsvValidator < ActiveModel::EachValidator
       emails = column_to_array(csv, options[:email])
       invalid_emails = []
       emails.each do |email|
-        unless email.match /\A[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\z/i
+        begin
+          address = Mail::Address.new email
+          valid = address.address == email && address.domain
+          tree = address.__send__(:tree)        
+          valid &&= (tree.domain.dot_atom_text.elements.size > 1)
+        rescue
+          valid = false
+        end
+        unless valid
           invalid_emails << email
         end
       end
+      
       if invalid_emails.length > 0
         record.errors.add(attribute, options[:message] || "contains invalid emails (#{invalid_emails.join(', ')})")
       end

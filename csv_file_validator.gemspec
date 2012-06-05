@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.version     = "0.0.1"
   s.authors     = ["Matt Fordham"]
   s.email       = ["matt@revolvercreative.com"]
-  s.homepage    = "http://github.com/mattfordham/CSV-Validator"
+  s.homepage    = "https://github.com/mattfordham/csv_validator"
   s.summary     = "A CVS validator for Rails 3."
   s.description = "A CVS validator for Rails 3. See homepage for details: http://github.com/mattfordham/CSV-Validator."
 

@@ -13,6 +13,11 @@ class CsvValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
     options = @@default_options.merge(self.options)
     
+    unless value
+      record.errors.add(attribute, options[:message] || "must be present")
+      return
+    end
+    
     begin
       csv = CSV.read(value.path)
     rescue CSV::MalformedCSVError

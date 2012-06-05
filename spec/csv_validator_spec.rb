@@ -22,6 +22,12 @@ describe CsvValidator do
       TestUser1.new(:csv => upload('support/3x6.csv')).should be_valid
     end
 
+    it "should be invalid if no csv file given" do
+      testUser = TestUser1.new()
+      testUser.should have(1).error_on(:csv)
+      testUser.error_on(:csv)[0].should eq("must be present")
+    end
+
     it "should be invalid due to maformed CSV" do
       testUser = TestUser1.new(:csv => upload('support/not_csv.png'))
       testUser.should have(1).error_on(:csv)
@@ -137,7 +143,7 @@ describe CsvValidator do
     end
 
     class TestUser11 < TestModel
-      validates :csv, :csv => {:email => 0}
+        validates :csv, :csv => {:email => 0}
     end
 
     class TestUser12 < TestModel

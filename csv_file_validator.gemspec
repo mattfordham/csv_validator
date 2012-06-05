@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.summary     = "A CVS validator for Rails 3."
   s.description = "A CVS validator for Rails 3. See homepage for details: http://github.com/mattfordham/CSV-Validator."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
   s.require_paths = %w(lib)
   s.add_dependency("activemodel", ">= 0")
